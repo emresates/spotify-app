@@ -8,10 +8,10 @@ import { selectGenreListId } from '../redux/features/playerSlice';
 const Discover = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying, genreListId } = useSelector(
-    (state) => state.player
+    (state) => state.player,
   );
   const { data, isFetching, error } = useGetSongsByGenreQuery(
-    genreListId || 'POP'
+    genreListId || 'POP',
   );
 
   if (isFetching) return <Loader title="Loading songs..." />;
@@ -39,7 +39,7 @@ const Discover = () => {
       </div>
 
       {/* Wrapper */}
-      <div className="flex flex-wrap sm:justify-start justify-center gap-8">
+      <div className="flex flex-wrap sm:justify-start justify-center gap-4">
         {data?.map((song, i) => (
           <SongCard
             key={song.key}
