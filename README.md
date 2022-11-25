@@ -7,3 +7,7 @@
 ### If we click on the photos the song starts to play but the api only allows us to play for 1.5 minutes.
 
 ### On the Around You page, it brings us songs that are popular according to our location. On the Top Artists page, we come across singers who have been listened to a lot in the world lately. On the top charts page, we see songs that have been listened to recently in the world.
+
+
+https://user-images.githubusercontent.com/84937009/204015678-eaca7cff-44ec-4f78-9eec-da76f651786a.mp4
+
