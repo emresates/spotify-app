@@ -31,21 +31,21 @@ const SongCard = ({ song, i, isPlaying, activeSong, data }) => {
             handlePlay={handlePlayClick}
           />
         </div>
-        <img src={song.images?.coverart} alt="song_img" />
+        <img src={song.attributes?.artwork?.url} alt="song_img" />
       </div>
       <div className="mt-4 flex flex-col">
         <p className="font-semibold text-lg text-white truncate">
-          <Link to={`/songs/${song?.key}`}>{song.title}</Link>
+          <Link to={`/songs/${song?.id}`}>{song?.attributes?.name}</Link>
         </p>
         <p className="text-sm truncate text-gray-300 mt-1 ">
           <Link
             to={
               song.artist
-                ? `/artist/${song?.artist[0]?.adamid}  `
+                ? `/artist/${song?.artist?.[0]?.adamid}  `
                 : '/top-artists'
             }
           >
-            {song.subtitle}
+            {song?.attributes?.artistName}
           </Link>
         </p>
       </div>
